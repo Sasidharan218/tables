@@ -131,17 +131,19 @@ function TABLE() {
 							</th>
 						</tr>
 					</thead>
+					<tbody>
 					{currentData.map((user ,i)=> (
-						<tbody key={i}>
-							<tr>
+						
+							<tr key={i}>
 					
 								<td key={user.firstName}>{user.firstName} </td>
 								<td key={user.lastName}>{user.lastName} </td>
 								<td key={user.email}>{user.email}</td>
 								<td key={user.age}>{user.age}</td>
 							</tr>
-						</tbody>
+						
 					))}
+					</tbody>
 				</table>
 			</div>
 
