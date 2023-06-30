@@ -73,19 +73,7 @@ function TABLE() {
 		setSearchPhrase(event.target.value);
 	};
 
-	const renderUsers = () => {
-		return currentData.map((user, i) => {
-			return (
-				<tr key={i}>
-					
-					<td>{user.firstName} </td>
-          			<td>{user.lastName} </td>
-					<td>{user.email}</td>
-					<td>{user.age}</td>
-				</tr>
-			);
-		});
-	};
+	
 
 
 	return (
@@ -143,7 +131,17 @@ function TABLE() {
 							</th>
 						</tr>
 					</thead>
-					<tbody>{renderUsers()}</tbody>
+					{currentData.map((user ,i)=> (
+						<tbody key={i}>
+							<tr>
+					
+								<td key={user.firstName}>{user.firstName} </td>
+								<td key={user.lastName}>{user.lastName} </td>
+								<td key={user.email}>{user.email}</td>
+								<td key={user.age}>{user.age}</td>
+							</tr>
+						</tbody>
+					))}
 				</table>
 			</div>
 
